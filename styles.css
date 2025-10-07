@@ -40,7 +40,7 @@ h1:hover {
 .content {
     background-color: white;
     padding: 20px;
-    transition: background-color 5s ease, color 5s ease; /* box-shadow faster */
+    transition: background-color 5s ease, color 5s ease;
 }
 
 .content:hover {
