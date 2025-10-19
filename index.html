@@ -1,50 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fontdiner+Swanky&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
-    <div class="navigation-bar"></div>
-    <div class="content">
+  </head>
+  <body>
+    <div class="navigation-bar">
+      <a href="#section-2"><p class="navigation-text">Kitty Gallery</p></a>
+      <a href="#section-3"><p class="navigation-text">Choose your Kitty</p></a>
+      <a href="#footer"><p class="navigation-text">Contact Us!</p></a>
+      <img src="Cat pictures/nav-cat.png" alt="navigation-cat" />
+    </div>
+    <div class="spider-hr-wrapper">
+      <hr class="spider-line" />
+      <img src="Cobweb/Spider.png" class="spider spider-left" alt="Spider" />
+      <img src="Cobweb/Spider.png" class="spider spider-right" alt="Spider" />
+    </div>
+    <div class="section-wrapper">
+      <div class="content content-top" id="section-1">
         <h1>Are you sure, that your kitten is cute?</h1>
         <h1>Do you think it will always be the same?</h1>
         <h1>Let's check, what could happen with your kitten!</h1>
-    </div>
-    <div class="content">
+      </div>
+      <div class="spider-hr-wrapper">
+        <hr class="spider-line" />
+        <img src="Cobweb/Spider.png" class="spider spider-left" alt="Spider" />
+        <img src="Cobweb/Spider.png" class="spider spider-right" alt="Spider" />
+      </div>
+      <div class="content content-middle" id="section-2">
+        <h1 class="Gallery-header">Gallery</h1>
         <div class="img-container">
-                <div class="picture-column">
+          <div class="picture-column">
             <div class="pictures">
-                <img class="cat-img" src="Cat pictures\Kitten1.jpg" alt="Cute Cat">
-                <img class="overlay-img" src="Cat pictures\Cat1.jpg" alt="Cute Kitten">
+              <img
+                class="cat-img"
+                src="Cat pictures\Kitten1.jpg"
+                alt="Cute Cat"
+              />
+              <img
+                class="overlay-img"
+                src="Cat pictures\Cat1.jpg"
+                alt="Cute Kitten"
+              />
             </div>
             <div class="pictures">
-                <img class="cat-img" src="Cat pictures\Kitten2.jpg" alt="Cute Cat">
-                <img class="overlay-img" src="Cat pictures\Cat2.jpg" alt="Cute Kitten">
-            </div>                    
-                </div>
-            <div class="picture-column">
-            <div class="pictures">
-                <img class="cat-img" src="Cat pictures\Kitten5.jpg" alt="Cute Cat">
-                <img class="overlay-img" src="Cat pictures\Cat5.jpg" alt="Cute Kitten">
+              <img
+                class="cat-img"
+                src="Cat pictures\Kitten2.jpg"
+                alt="Cute Cat"
+              />
+              <img
+                class="overlay-img"
+                src="Cat pictures\Cat2.jpg"
+                alt="Cute Kitten"
+              />
             </div>
-                </div>
-            <div class="picture-column">
+          </div>
+          <div class="picture-column">
             <div class="pictures">
-                <img class="cat-img" src="Cat pictures\Kitten3.jpg" alt="Cute Cat">
-                <img class="overlay-img" src="Cat pictures\Cat3.jpg" alt="Cute Kitten">
+              <img
+                class="cat-img"
+                src="Cat pictures\Kitten5.jpg"
+                alt="Cute Cat"
+              />
+              <img
+                class="overlay-img"
+                src="Cat pictures\Cat5.jpg"
+                alt="Cute Kitten"
+              />
+            </div>
+          </div>
+          <div class="picture-column">
+            <div class="pictures">
+              <img
+                class="cat-img"
+                src="Cat pictures\Kitten3.jpg"
+                alt="Cute Cat"
+              />
+              <img
+                class="overlay-img"
+                src="Cat pictures\Cat3.jpg"
+                alt="Cute Kitten"
+              />
             </div>
             <div class="pictures">
-                <img class="cat-img" src="Cat pictures\Kitten4.jpg" alt="Cute Cat">
-                <img class="overlay-img" src="Cat pictures\Cat4.jpg" alt="Cute Kitten">
+              <img
+                class="cat-img"
+                src="Cat pictures\Kitten4.jpg"
+                alt="Cute Cat"
+              />
+              <img
+                class="overlay-img"
+                src="Cat pictures\Cat4.jpg"
+                alt="Cute Kitten"
+              />
+              <img src="" alt="" />
             </div>
-                </div>
+          </div>
         </div>
-    </div>    
-</body>
+      </div>
+      <div class="spider-hr-wrapper">
+        <hr class="spider-line" />
+        <img src="Cobweb/Spider.png" class="spider spider-left" alt="Spider" />
+        <img src="Cobweb/Spider.png" class="spider spider-right" alt="Spider" />
+      </div>
+      <div class="section-form" id="section-3">
+        <h1 class="form-header">Now, it's time to choose your Cat/Kitty!</h1>
+        <form action="#" method="get" class="cat-form">
+          <label for="preferences">Preferences</label>
+          <textarea
+            name="preferences"
+            id="preferences"
+            rows="4"
+            cols="40"
+            placeholder="Tell us what you like..."
+          ></textarea>
+
+          <label for="cats-type-input">Choose the Color</label>
+          <select name="cats-type-input" id="cats-type-input">
+            <option value="Ginger">Ginger</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Grey">Grey</option>
+          </select>
+
+          <div class="radio-group">
+            <p>Choose the age</p>
+            <label for="Adult"
+              ><input
+                type="radio"
+                id="Adult"
+                name="cat-age"
+                value="Adult"
+                required
+              />
+              Adult</label
+            >
+            <label for="Kitty"
+              ><input
+                type="radio"
+                id="Kitty"
+                name="cat-age"
+                value="Kitty"
+                required
+              />
+              Kitty</label
+            >
+          </div>
+
+          <input type="submit" class="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <div class="spider-hr-wrapper">
+      <hr class="spider-line" />
+      <img src="Cobweb/Spider.png" class="spider spider-left" alt="Spider" />
+      <img src="Cobweb/Spider.png" class="spider spider-right" alt="Spider" />
+    </div>
+    <div class="footer" id="footer">
+      <a href="https://www.linkedin.com/in/tsatskrialashvili-iva/"
+        ><p class="navigation-text">Made by Iva Tsatskrialashvili</p></a
+      >
+      <p class="navigation-text">October 2025</p>
+      <img src="Cat pictures/nav-cat.png" alt="navigation-cat" />
+    </div>
+  </body>
 </html>
