@@ -14,10 +14,10 @@
   </head>
   <body>
     <div class="navigation-bar">
-      <a href="#section-2"><p class="navigation-text">Kitty Gallery</p></a>
-      <a href="#section-3"><p class="navigation-text">Choose your Kitty</p></a>
-      <a href="#footer"><p class="navigation-text">Contact Us!</p></a>
-      <img src="Cat pictures/nav-cat.png" alt="navigation-cat" />
+      <a href="index.html"><img src="Cat pictures/nav-cat.png" alt="navigation-cat" /></a>
+      <a href="cats.html"><p class="navigation-text">Kitty Gallery</p></a>
+      <a href="AboutUs.html"><p class="navigation-text">About us</p></a>
+      <a href="login.html"><p class="navigation-text">Login</p></a>
     </div>
     <div class="spider-hr-wrapper">
       <hr class="spider-line" />
@@ -25,7 +25,7 @@
       <img src="Cobweb/Spider.png" class="spider spider-right" alt="Spider" />
     </div>
     <div class="section-wrapper">
-      <div class="content content-top" id="section-1">
+      <div class="content-background content-top" id="section-1">
         <h1>Are you sure, that your kitten is cute?</h1>
         <h1>Do you think it will always be the same?</h1>
         <h1>Let's check, what could happen with your kitten!</h1>
@@ -35,74 +35,83 @@
         <img src="Cobweb/Spider.png" class="spider spider-left" alt="Spider" />
         <img src="Cobweb/Spider.png" class="spider spider-right" alt="Spider" />
       </div>
-      <div class="content content-middle" id="section-2">
+      <div class="content-background content-middle" id="section-2">
         <h1 class="Gallery-header">Gallery</h1>
         <div class="img-container">
           <div class="picture-column">
             <div class="pictures">
-              <img
-                class="cat-img"
-                src="Cat pictures\Kitten1.jpg"
-                alt="Cute Cat"
-              />
-              <img
-                class="overlay-img"
-                src="Cat pictures\Cat1.jpg"
-                alt="Cute Kitten"
-              />
+              <a href="cats.html" class="picture-link">
+                <img
+                  class="cat-img"
+                  src="Cat pictures\Kitten1.jpg"
+                  alt="Cute Cat"
+                />
+                <img
+                  class="overlay-img"
+                  src="Cat pictures\Cat1.jpg"
+                  alt="Cute Kitten"
+                />
+              </a>
             </div>
             <div class="pictures">
-              <img
-                class="cat-img"
-                src="Cat pictures\Kitten2.jpg"
-                alt="Cute Cat"
-              />
-              <img
-                class="overlay-img"
-                src="Cat pictures\Cat2.jpg"
-                alt="Cute Kitten"
-              />
-            </div>
-          </div>
-          <div class="picture-column">
-            <div class="pictures">
-              <img
-                class="cat-img"
-                src="Cat pictures\Kitten5.jpg"
-                alt="Cute Cat"
-              />
-              <img
-                class="overlay-img"
-                src="Cat pictures\Cat5.jpg"
-                alt="Cute Kitten"
-              />
+              <a href="cats.html" class="picture-link">
+                <img
+                  class="cat-img"
+                  src="Cat pictures\Kitten2.jpg"
+                  alt="Cute Cat"
+                />
+                <img
+                  class="overlay-img"
+                  src="Cat pictures\Cat2.jpg"
+                  alt="Cute Kitten"
+                />
+              </a>
             </div>
           </div>
           <div class="picture-column">
             <div class="pictures">
-              <img
-                class="cat-img"
-                src="Cat pictures\Kitten3.jpg"
-                alt="Cute Cat"
-              />
-              <img
-                class="overlay-img"
-                src="Cat pictures\Cat3.jpg"
-                alt="Cute Kitten"
-              />
+              <a href="cats.html" class="picture-link">
+                <img
+                  class="cat-img"
+                  src="Cat pictures\Kitten5.jpg"
+                  alt="Cute Cat"
+                />
+                <img
+                  class="overlay-img"
+                  src="Cat pictures\Cat5.jpg"
+                  alt="Cute Kitten"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="picture-column">
+            <div class="pictures">
+              <a href="cats.html" class="picture-link">
+                <img
+                  class="cat-img"
+                  src="Cat pictures\Kitten3.jpg"
+                  alt="Cute Cat"
+                />
+                <img
+                  class="overlay-img"
+                  src="Cat pictures\Cat3.jpg"
+                  alt="Cute Kitten"
+                />
+              </a>
             </div>
             <div class="pictures">
-              <img
-                class="cat-img"
-                src="Cat pictures\Kitten4.jpg"
-                alt="Cute Cat"
-              />
-              <img
-                class="overlay-img"
-                src="Cat pictures\Cat4.jpg"
-                alt="Cute Kitten"
-              />
-              <img src="" alt="" />
+              <a href="cats.html" class="picture-link">
+                <img
+                  class="cat-img"
+                  src="Cat pictures\Kitten4.jpg"
+                  alt="Cute Cat"
+                />
+                <img
+                  class="overlay-img"
+                  src="Cat pictures\Cat4.jpg"
+                  alt="Cute Kitten"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -112,8 +121,8 @@
         <img src="Cobweb/Spider.png" class="spider spider-left" alt="Spider" />
         <img src="Cobweb/Spider.png" class="spider spider-right" alt="Spider" />
       </div>
-      <div class="section-form" id="section-3">
-        <h1 class="form-header">Now, it's time to choose your Cat/Kitty!</h1>
+      <div class="section-form content-background" id="section-3">
+        <h1 class="form-header">Get more information</h1>
         <form action="#" method="get" class="cat-form">
           <label for="preferences">Preferences</label>
           <textarea
@@ -125,7 +134,7 @@
           ></textarea>
 
           <label for="cats-type-input">Choose the Color</label>
-          <select name="cats-type-input" id="cats-type-input">
+          <select name="cats-type-input" id="cats-type-input" required>
             <option value="Ginger">Ginger</option>
             <option value="Black">Black</option>
             <option value="White">White</option>
@@ -155,6 +164,10 @@
               Kitty</label
             >
           </div>
+
+          <label for="cat-form-email">Choose the Color</label>
+          <input class = "cat-form-email" name="cat-form-email" type="email" placeholder="type in your Email" required>
+          </input>
 
           <input type="submit" class="submit" value="Submit" />
         </form>

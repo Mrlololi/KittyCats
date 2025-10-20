@@ -37,6 +37,7 @@ h1:hover {
   display: flex;
   justify-content: space-around;
   font-weight: 900;
+  font-size: 20px;
 }
 
 .navigation-bar > a,
@@ -45,25 +46,30 @@ h1:hover {
   color: black;
 }
 
+.navigation-bar > a > img{
+  width: auto;
+  height: 50px;
+}
+
 .section-wrapper {
   position: relative;
   overflow: visible;
 }
 
-.content {
+/* !!!!!!!!!!RED COLOR BACKGROUND!!!!!!!! */
+
+.content-background {
   background-color: white;
   padding: 20px;
   position: relative;
   transition: background-color 5s ease, color 5s ease;
 }
 
-.content:hover {
+.content-background:hover {
   background-color: rgb(223, 0, 0);
 }
 
-.section-form:hover {
-  background-color: rgb(223, 0, 0);
-}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .section-wrapper {
   position: relative;
@@ -87,9 +93,7 @@ h1:hover {
   opacity: 0.7;
 }
 
-.content-middle {
-  padding-bottom: 50px;
-}
+/* !!!!!!!!!!!!COBWEB!!!!!!!!!!!! */
 
 .content-middle::after,
 .section-form::after {
@@ -97,7 +101,7 @@ h1:hover {
   position: absolute;
   inset: 0;
   height: 100%;
-  background: url("Cobweb/Cobweb-Middle.png") no-repeat center / 100% auto;
+  background: url("Cobweb/Cobweb-Middle.png") no-repeat center / cover;
   opacity: 0;
   transition: opacity 2s ease-in-out;
   pointer-events: none;
@@ -107,6 +111,8 @@ h1:hover {
 .section-form:hover::after {
   opacity: 0.7;
 }
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .img-container {
   display: flex;
@@ -123,17 +129,37 @@ h1:hover {
   overflow: hidden;
 }
 
-.cat-img {
+.picture-link{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cat-img, .overlay-img {
   width: 100%;
   height: auto;
   border-radius: 20%;
   transition: opacity 2s ease;
 }
 
+.cat-img:hover {
+  opacity: 0;
+}
+
+.overlay-img {
+  position: absolute;
+  inset:0;
+  opacity: 0;
+}
+
+.overlay-img:hover {
+  opacity: 1;
+}
+
 .form-header:hover::before {
   content: "Email me to get more information about them - Ivikosha@gmail.com";
   position: absolute;
-  bottom: -50%;
+  bottom: -100%;
   height: max-content;
   color: black;
   z-index: 100;
@@ -141,27 +167,10 @@ h1:hover {
   font-size: 50%;
 }
 
-.cat-img:hover {
-  opacity: 0;
-}
-
 .picture-column {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.overlay-img {
-  position: absolute;
-  inset:0;
-  width: 100%;
-  opacity: 0;
-  border-radius: 20%;
-  transition: opacity 1.5s ease;
-}
-
-.overlay-img:hover {
-  opacity: 1;
 }
 
 .spider-hr-wrapper {
@@ -237,7 +246,8 @@ h1:hover {
 }
 
 .cat-form textarea,
-.cat-form select {
+.cat-form select,
+.cat-form-email {
   width: 100%;
   box-sizing: border-box;
   padding: 8px;
@@ -249,4 +259,297 @@ h1:hover {
   max-width: 100%;
   resize: vertical;
   display: block;
+}
+
+/* !!!!!!!!!!!!!!!!!CAT-PAGE!!!!!!!!!!!!!!!!! */
+
+.cats-list{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cat-card{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.cat-text > h2, .cat-text > p{
+  text-align: center;
+  margin: auto;
+}
+
+.cat-text {
+  box-sizing: border-box;
+  width: 100%;
+  border-left:#c25516 solid 2px;
+  border-bottom:#c25516 solid 2px;
+  border-right:#c25516 solid 2px;
+  border-radius:12px;
+  transition: border-color 2s ease;
+}
+
+.cat-text:hover{
+  border-color: black;
+}
+
+.cat-image img{ 
+  width:100%; 
+  border-radius:12px; 
+  box-sizing: border-box; 
+  border-left:#c25516 solid 2px;
+  border-top:#c25516 solid 2px;
+  border-right:#c25516 solid 2px;}
+
+@media (max-width: 700px){
+  .cat-card { flex-direction: column; }
+  .cat-image, .cat-text{ width:100%; }
+}
+
+.cat-picture-submit {
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  background-color: #da6517;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 10px auto;
+
+}
+
+.cat-picture-submit:hover {
+  background-color: #c25516;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!LOGIN PAGE!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.login-section {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.login-title {
+  margin: 8px auto 20px;
+}
+
+.login-card{
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.login-image{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 2px solid #c25516;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  transition: border-color 0.3s ease;
+}
+.login-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auth-form{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border: 2px solid #c25516;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.login-card:hover .login-image,
+.login-card:hover .auth-form{
+  border-color: black;
+}
+
+.auth-label{
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.auth-input{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 2px solid #c25516;
+  border-radius: 8px;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 120ms ease;
+}
+.auth-input:focus{
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(218,101,23,0.25);
+  transform: translateY(-1px);
+}
+
+.auth-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 18px;
+}
+.auth-remember{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.auth-link{
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid #da6517;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.auth-link:hover{
+  color: #000;
+  border-color: #c25516;
+}
+
+.auth-submit{
+  align-self: center;
+  margin-top: 8px;
+  transition: transform 120ms ease, background-color 200ms ease;
+}
+.auth-submit:hover{
+  transform: translateY(-1px);
+}
+
+.auth-note{
+  text-align: center;
+  margin: 10px 0 0;
+  font-size: 18px;
+}
+
+@media (max-width: 700px){
+  .login-card{ max-width: 100%; }
+  .auth-row{ flex-direction: column; gap: 6px; }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!ABOUT US!!!!!!!!!!!!!!!!!!!!!!! */
+
+.about-section{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+.about-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.about-image{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 2px solid #c25516;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  transition: border-color 0.3s ease;
+}
+.about-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-text{
+  border: 2px solid #c25516;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 16px 18px;
+  transition: border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+}
+.about-card:hover .about-image,
+.about-card:hover .about-text{
+  border-color: black;
+}
+.about-text h2{
+  margin: 0;
+  text-align: center;
+  font-family: "Fontdiner Swanky", serif;
+}
+
+.about-panel{
+  border: 2px solid #c25516;
+  border-radius: 12px;
+  padding: 18px;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+.about-panel:hover{
+  border-color: black;
+}
+.about-panel h3{
+  margin: 0 0 8px 0;
+  text-align: center;
+  font-family: "Fontdiner Swanky", serif;
+}
+.about-list{
+  margin: 8px 0 16px;
+}
+
+.btn{
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #da6517;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: inherit;
+  transition: background-color 200ms ease, transform 120ms ease;
+}
+.btn:hover{
+  background-color: #c25516;
+  transform: translateY(-1px);
+}
+.btn-outline{
+  background: transparent;
+  color: black;
+  border: 2px solid #da6517;
+}
+.btn-outline:hover{
+  color: black;
+  background: rgba(218,101,23,0.08);
+  border-color: #c25516;
+}
+
+@media (max-width: 700px){
+  .about-grid{ gap: 24px; }
 }
