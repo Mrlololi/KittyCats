@@ -293,6 +293,7 @@ h1:hover {
   border-right:#c25516 solid 2px;
   border-radius:12px;
   transition: border-color 2s ease;
+  background-color: white !important;
 }
 
 .cat-text:hover{
@@ -552,4 +553,13 @@ h1:hover {
 
 @media (max-width: 700px){
   .about-grid{ gap: 24px; }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!! */
+
+.about-image,
+.login-image,
+.auth-form,
+.about-text {
+  box-sizing: border-box;
 }
